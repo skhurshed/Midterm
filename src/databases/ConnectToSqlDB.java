@@ -42,7 +42,7 @@ public class ConnectToSqlDB {
         try {
             connectToSqlDatabase();
             statement = connect.createStatement();
-            resultSet = statement.executeQuery("select * from " + tableName);
+            resultSet = statement.executeQuery("select * from"+tableName);
             data = getResultSetData(resultSet, columnName);
         } catch (ClassNotFoundException e) {
             throw e;
@@ -157,7 +157,7 @@ public class ConnectToSqlDB {
         User user = null;
         try{
             Connection conn = connectToSqlDatabase();
-            String query = "SELECT * FROM Students";
+            String query = "SELECT * FROM students";
             // create the java statement
             Statement st = conn.createStatement();
             // execute the query, and get a java resultset
