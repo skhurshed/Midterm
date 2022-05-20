@@ -1,6 +1,7 @@
 package string.problems;
 
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +14,9 @@ public class DuplicateWord {
          */
 
         String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
+        StringBuilder builder = new StringBuilder();
+
+
 
         String[] words = st.toLowerCase().trim().split(" ");
         Map<String, Integer> duplicateString = new HashMap<>();

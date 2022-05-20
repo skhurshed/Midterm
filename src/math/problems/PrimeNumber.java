@@ -1,5 +1,7 @@
 package math.problems;
 
+import java.util.ArrayList;
+
 public class PrimeNumber {
 
 	public static void main(String[] args) {
@@ -12,28 +14,28 @@ public class PrimeNumber {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 *
 		 */
-		int i =2;
-		int num =0;
+		int num1 = 2;
+		int num2 = 1000000;
+		int count = 0;
 
-		StringBuilder primeNumbers = new StringBuilder();
-
-		for (i=2 ; i <= 1000000; i++)
-		{
-			int counter=0;
-			for(num =i; num>=1; num--)
-			{
-				if(i%num==0)
-				{
-					counter = counter + 1;
+		for (int i = num1; i <= num2; i++) {
+			int n = i;
+			int a = 2;
+			int temp = 0;
+			while (a <= (n / 2)) {
+				if (n % a == 0) {
+					temp++;
+					break;
 				}
+				a++;
 			}
-			if (counter ==2)
-			{
-				primeNumbers.append(i).append(" ");
+			if (temp == 0 && i != 1) {
+				count++;
 			}
-
 		}
-		System.out.print(primeNumbers);
+		System.out.println(count);
 	}
 
 }
+
+

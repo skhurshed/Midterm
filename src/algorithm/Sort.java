@@ -1,5 +1,7 @@
 package algorithm;
 
+import static com.mongodb.client.model.Aggregates.merge;
+
 public class Sort {
 
     long executionTime = 0;
@@ -52,6 +54,7 @@ public class Sort {
     }
 
     public int[] bubbleSort(int [] array){
+        final long startTime = System.currentTimeMillis();
         int [] list = array;
         for (int i = 0; i <array.length- 1; i++)
             for (int j = 0; j < array.length - i - 1; j++)
@@ -60,19 +63,26 @@ public class Sort {
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
                 }
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
         return list;
     }
     
 
-    public int [] mergeSort(int [] array){
+    public int [] mergeSort(int [] array,int start, int end){
+        final long startTime = System.currentTimeMillis();
         int [] list = array;
-        //implement here
-        
-        
 
+
+
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
         return list;
     }
-    
+
+
 
     public int [] quickSort(int [] array){
         int [] list = array;
@@ -85,8 +95,7 @@ public class Sort {
     
     public int [] heapSort(int [] array){
         int [] list = array;
-        //implement here
-        
+
         
 
         return list;

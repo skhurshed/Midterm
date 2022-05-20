@@ -11,19 +11,22 @@ public class DetermineLargestWord {
          */
 
         String s = "Human brain is a biological learning machine";
-        Map<Integer, String> wordNLength = findTheLargestWord(s);
+        String wordNLength = findTheLargestWord(s);
 
         System.out.println(findTheLargestWord(s));
 
 
     }
 
-    public static Map<Integer, String> findTheLargestWord(String wordGiven) {
+    public static String findTheLargestWord(String wordGiven) {
         Map<Integer, String> map = new HashMap<Integer, String>();
         String st = "", large = "";
-        //implement
+        for (String word : wordGiven.split(" "))
+            if (word.length() >= large.length())
+                large = word;
 
-        return map;
+
+        return large;
     }
 }
 

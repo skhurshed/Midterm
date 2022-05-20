@@ -4,36 +4,41 @@ import java.util.Arrays;
 
 public class Anagram {
 
-    public static void main(String[] args)   throws java.lang.Exception{
+    public static void main(String[] args) {
         //Write a Java Program to check if the two String are Anagram. Two String are called Anagram when there is
         //same character but in different order.For example,"CAT" and "ACT", "ARMY" and "MARY".
 
-        String String1 = null;
-        String String2 = null;
-        boolean result = isAnagram(String1,String2);
-            System.out.println(result);
+
+        String str1 = "cat";
+        String str2 = "act";
+
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+
+        // check if length is same
+        if(str1.length() == str2.length()) {
+
+            // convert strings to char array
+            char[] charArray1 = str1.toCharArray();
+            char[] charArray2 = str2.toCharArray();
+
+            // sort the char array
+            Arrays.sort(charArray1);
+            Arrays.sort(charArray2);
+
+            // if sorted char arrays are same
+            // then the string is anagram
+            boolean result = Arrays.equals(charArray1, charArray2);
+
+            if(result) {
+                System.out.println(str1 + " and " + str2 + " are anagram.");
+            }
+            else {
+                System.out.println(str1 + " and " + str2 + " are not anagram.");
+            }
         }
-        public static boolean isAnagram(String first, String second)
-        {
-            // remove all whitespaces and convert strings to lowercase
-            first  = first.replaceAll("\\s", "").toLowerCase();
-            second = second.replaceAll("\\s", "").toLowerCase();
 
-        /* check whether string lengths are equal or not,
-        if unequal then not anagram */
-            if (first.length() != second.length())
-                return false;
 
-            // convert string to char array
-            char[] firstArray = first.toCharArray();
-            char[] secondArray = second.toCharArray();
-
-            // sort both the arrays
-            Arrays.sort(firstArray);
-            Arrays.sort(secondArray);
-
-            // checking whether both strings are equal or not
-            return Arrays.equals(firstArray,secondArray);
-        }
     }
+}
 

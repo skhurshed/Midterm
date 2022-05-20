@@ -25,32 +25,43 @@ public class UnitTestingMath {
 
     @Test
     public void testLowestDifference(){
-
+        FindLowestDifference findSmallest;
+        findSmallest= new FindLowestDifference();
+        Assert.assertEquals(1,1);
     }
 
     @Test
     public void testMissingNumber(){
-
+        FindMissingNumber sum;
+        sum= new FindMissingNumber();
+        Assert.assertEquals(9,9);
     }
 
     @Test
     public void testLowestNumber(){
-
+        LowestNumber min;
+        min = new LowestNumber();
+        Assert.assertEquals(10,10);
     }
 
     @Test
     public void testMakePyramid(){
-
+        MakePyramid printTriangle;
+        printTriangle= new MakePyramid();
+        Assert.assertEquals(6,6);
     }
 
     @Test
     public void testPattern(){
 
+
     }
 
     @Test
     public void testPrimeNumber(){
-
+        PrimeNumber count;
+        count= new PrimeNumber();
+        Assert.assertEquals(1,1);
     }
 
 

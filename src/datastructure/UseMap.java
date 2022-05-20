@@ -1,5 +1,10 @@
 package datastructure;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class UseMap {
 
 	public static void main(String[] args) {
@@ -11,6 +16,22 @@ public class UseMap {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 */
 
+		Map<String, List<String>> list = new HashMap<String, List<String>>();
+
+		list.put("Students", Collections.singletonList("Bob, Mike,Adam, Jennifer, Mariam, Ahmed, Ayza"));
+
+		System.out.println(list);
+
+
+		for(Map.Entry entry: list.entrySet()){
+			System.out.println(entry.getValue()+ " "+ entry.getKey());
+
+			int i=0;
+			while(i<1){
+				System.out.println(entry.getKey());
+				break;
+			}
+		}
 	}
 
 }
