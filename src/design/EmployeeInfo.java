@@ -1,5 +1,9 @@
 package design;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.Year;
+import java.util.Date;
 import java.util.Scanner;
 
 public class EmployeeInfo {
@@ -58,18 +62,24 @@ public class EmployeeInfo {
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 * 
 	 */
-	public static int calculateEmployeePension(){
+	public static <LocalDate2> int calculateEmployeePension(){
 		int total=0;
 		Scanner sc  = new Scanner(System.in);
 		System.out.println("Please enter start date in format (example: May,2015): ");
 		String joiningDate = sc.nextLine();
 		System.out.println("Please enter today's date in format (example: August,2017): ");
 		String todaysDate = sc.nextLine();
-        String convertedJoiningDate = DateConversion.convertDate(joiningDate);
+		String convertedJoiningDate = DateConversion.convertDate(joiningDate);
         String convertedTodaysDate = DateConversion.convertDate(todaysDate);
 
         //implement numbers of year from above two dates
 		//Calculate pension
+
+
+
+
+
+
 
 
 

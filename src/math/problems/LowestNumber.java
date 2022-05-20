@@ -3,6 +3,7 @@ package math.problems;
 import databases.ConnectToSqlDB;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class LowestNumber {
@@ -12,9 +13,19 @@ public class LowestNumber {
 		 * Write java solution to find the lowest number from this array.
 		 * Use one of the databases from mysql or mongodb to store and to retrieve.
 		 */
-		int  array[] = new int[]{211,110,99,34,67,89,67,456,321,456,78,90,45,32,56,78,90,54,32,123,67,5,679,54,32,65};
 
 		//find lowest number from the array
+
+		int array[] = {10, 20, 25, 63, 96, 57};
+		int min = array[0];
+
+		for (int i = 1; i < array.length; i++) {
+			if (array[i] < min) {
+				min = array[i];
+			}
+		}
+		System.out.println("smallest element is ::" + min);
+
 
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		List<String> lowestValue = new ArrayList<String>();
@@ -26,9 +37,11 @@ public class LowestNumber {
 			e.printStackTrace();
 		}
 		System.out.println("Data is reading from the Table (tbl_primenumber) and displaying to the console");
-		for(String st:lowestValue){
+		for (String st : lowestValue) {
 			System.out.println(st);
 		}
 	}
-
 }
+
+
+

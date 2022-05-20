@@ -21,7 +21,5 @@ public class FindMissingNumber {
         System.out.println(sum);
         }
 
-
-
     }
 

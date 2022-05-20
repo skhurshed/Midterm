@@ -50,21 +50,43 @@ what is the difference between the HashTable and HashMap?
 A.HashMap is non synchronized allows one null key multiple null values. Hashtable is synchronized and doesn't allow any null key or value.
 
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+A.RDBMS = Array (i.e. Array of structures)
+  Network data model = Graph
+  Hierarchical data model = Trees
 
 How HashMap works in java?
 A. implements the Map interface which allows us to store key and value pair
 
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
-A.
+A.an exception that occurs when trying to use an index that does not exist.
+
 What are the different ways of copying an array into another array?
+A. use a loop, use arraycopy()method, copyOf()
 What is difference between an array and a linked list?
+A.ArrayList internally uses a dynamic array to store its elements. LinkedList uses Doubly Linked List to store its elements.
+ ArrayList is slow as array manipulation is slower. LinkedList is faster being node based as not much bit shifting required.
+
 What is DFS and BFS?
+A. -DFS is an algorithm for finding or traversing graphs or trees in depth-ward direction.
+The execution of the algorithm begins at the root node and explores each branch before backtracking.
+-BFS is an algorithm that is used to graph data or searching tree or traversing structures.
+
 What is Recursion?
+A. when a method calls itself.
+
 What are linear and non linear data Structures?
+A. -linear is like lists and queue.
+   -Non-Linear is graph and tree.
 What is Big-(O)-notation?
 A. way to calculate the complexity of your code.
 
 Outlined different kind of sorting algorithm with time complexity?
+A.  1. Bubble Sort- O(n)
+    2. Selection Sort- O(n^2)
+    3. Insertion Sort- O(n)
+    4. Quick Sort- O(nlogn)
+    5. Merge Sort- O(nlogn)
+    6. Bucket Sort O(n+k)
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.

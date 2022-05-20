@@ -8,8 +8,34 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
+			int n;
+			int a;
+
+		for ( n=100 ; n >= 0; n--) {
+
+			for (a = 100; a <=100; a++) {
+
+				System.out.print(n + " ,");
+				n--;
+
+					}
+
+				}
+
+			}
+		}
 
 
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+

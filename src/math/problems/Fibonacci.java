@@ -9,13 +9,12 @@ public class Fibonacci {
         int x1=0, y1=1, sum=0;
         System.out.print(x1+" ,"+y1);
 
-        for(int x=2; x<40; x++){
-            sum=x1+y1;
-            System.out.print(" ,"+sum);
-            x1=y1;
-            y1=sum;
+            for (int x = 2; x < 40; x++) {
+                sum = x1 + y1;
+                System.out.print(" ," + sum);
+                x1 = y1;
+                y1 = sum;
+            }
+
         }
-
-
     }
-}

@@ -12,7 +12,28 @@ public class PrimeNumber {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 *
 		 */
+		int i =2;
+		int num =0;
 
+		StringBuilder primeNumbers = new StringBuilder();
+
+		for (i=2 ; i <= 1000000; i++)
+		{
+			int counter=0;
+			for(num =i; num>=1; num--)
+			{
+				if(i%num==0)
+				{
+					counter = counter + 1;
+				}
+			}
+			if (counter ==2)
+			{
+				primeNumbers.append(i).append(" ");
+			}
+
+		}
+		System.out.print(primeNumbers);
 	}
 
 }

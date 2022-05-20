@@ -1,35 +1,62 @@
 package math.problems;
 
+import java.util.Arrays;
+
 public class FindLowestDifference {
 
+    static int findSmallestDifference(int Array1[], int Array2[],
+                                      int m, int n)
+    {
+        // Sort both arrays
+        // using sort function
+        Arrays.sort(Array1);
+        Arrays.sort(Array2);
 
-    public static int[] smallestDifference(int[] array1, int[] array2) {
-        double smallestDiff = Double.MAX_VALUE;
-        int[] smallestDiffPair = new int[2];
+        int a = 0, b = 0;
 
-        for (int i = 0; i < array1.length; i++) {
-            for (int j = 0; j < array2.length; j++) {
-                smallestDiff = Math.abs(array1[i] - array2[j]);
-                smallestDiffPair[0] = array1[i];
-                smallestDiffPair[1] = array2[j];
+        // Initialize result as max value
+        int result = Integer.MAX_VALUE;
 
-            }
+        // Scan Both Arrays upto
+        // sizeof of the Arrays
+        while (a < m && b < n)
+        {
+            if (Math.abs(Array1[a] - Array2[b]) < result)
+                result = Math.abs(Array1[a] - Array2[b]);
 
+            // Move Smaller Value
+            if (Array1[a] < Array2[b])
+                a++;
+
+            else
+                b++;
         }
-        return smallestDiffPair;
+
+        // return final smallest result
+        return result;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+
+        int Array1[] = {30, 12, 5, 9, 2, 20, 33, 1};
+        int Array2[] = {18, 25, 41, 47, 17, 36, 14, 19};
+
+
+        // Calculate size of Both arrays
+        int m = Array1.length;
+        int n = Array2.length;
+
+        System.out.println(findSmallestDifference
+                (Array1, Array2, m, n));
+
+
         /*
          Implement in java.
          Read this below two array. Find the lowest difference between the two array cell.
          The lowest difference between cells is 1
         */
-        int[] array1 = {30, 12, 5, 9, 2, 20, 33, 1};
-        int[] array2 = {18, 25, 41, 47, 17, 36, 14, 19};
 
-        int[] pair = smallestDifference(array1, array2);
-        System.out.println(pair[0] + " " + pair[1]);
     }
 }
 
