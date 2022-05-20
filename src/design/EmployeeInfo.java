@@ -1,48 +1,47 @@
 package design;
 
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.Year;
-import java.util.Date;
 import java.util.Scanner;
 
 public class EmployeeInfo {
-	
- /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
- * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
- * then inherit that abstract class into EmployeeInfo class.Once you done with designing EmployeeInfo class,
- * go to FortuneEmployee class to apply all the fields and attributes.
- * 
- * Important: YOU MUST USE the 
- * OOP(abstraction,Encapsulation, Inheritance and Polymorphism) concepts in every level possible.
- * Use all kind of keywords(super,this,static,final........)
- * Implement Nested class.
- * Use Exception Handling.
- *
- */
+
+	/*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
+	 * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
+	 * then inherit that abstract class into EmployeeInfo class.Once you done with designing EmployeeInfo class,
+	 * go to FortuneEmployee class to apply all the fields and attributes.
+	 *
+	 * Important: YOU MUST USE the
+	 * OOP(abstraction,Encapsulation, Inheritance and Polymorphism) concepts in every level possible.
+	 * Use all kind of keywords(super,this,static,final........)
+	 * Implement Nested class.
+	 * Use Exception Handling.
+	 *
+	 */
 
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
+
 	/*
-	 * You must implement the logic for below 2 methods and 
+	 * You must implement the logic for below 2 methods and
 	 * following 2 methods are prototype as well for other methods need to be design,
 	 * as you will come up with the new ideas.
 	 */
-	
+
 	/*
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
-	public EmployeeInfo(int employeeId){
-		
-	}
-    public EmployeeInfo(String name, int employeeId){
-		
-	}
-	
+	int id;
+	String lastName, firstName;
+	static double salary;
+
+
+
+
+
+
+
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -51,9 +50,25 @@ public class EmployeeInfo {
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
-		int total=0;
-		return total;
+	public static int calculateEmployeeBonus(int numberOfYearsWithCompany) {
+		double best=.10;
+		double average= .8;
+		double min= .03;
+		double performancePercentage = 0;
+		if(performancePercentage==best){
+			double bonus = salary * best;
+
+
+		}else if(performancePercentage==average){
+			double bonus = salary * average;
+
+		}else {
+			double bonus = salary * min;
+		}
+
+
+		double bonus = salary * performancePercentage;
+		return (int) bonus;
 	}
 	
 	/*
@@ -85,6 +100,41 @@ public class EmployeeInfo {
 
 		return total;
 	}
+
+
+
+	public int employeeId() {
+		final int id1 = this.id;
+		return 0;
+	}
+
+
+	public String employeeName() {
+		final String firstName1 = this.firstName;
+		final String lastName1 = this.lastName;
+		return null;
+	}
+
+
+	public void assignDepartment() {
+		String department= null;
+
+	}
+
+
+	public int calculateSalary() {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter your Salary: ");
+		salary=sc.nextInt();
+		return (int) salary;
+	}
+
+
+	public void benefitLayout() {
+
+	}
+
+
 	private static class DateConversion {
 
 		public DateConversion(Months months){}

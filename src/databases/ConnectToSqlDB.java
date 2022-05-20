@@ -138,7 +138,7 @@ public class ConnectToSqlDB {
         try {
             connectToSqlDatabase();
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
-                ps.setString(1,"Ankita Sing");
+                ps.setString(1,"Saddif Khurshed");
                 ps.setInt(2,3590);
                 ps.executeUpdate();
 
@@ -168,7 +168,7 @@ public class ConnectToSqlDB {
                 String name = rs.getString("stName");
                 String id = rs.getString("stID");
                 String dob = rs.getString("stDOB");
-                //System.out.format("%s, %s\n", name, id);
+                System.out.format("%s, %s\n", name, id);
                 user = new User(name,id, dob);
                 list.add(user);
 
@@ -189,9 +189,9 @@ public class ConnectToSqlDB {
      }
   //  ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
  //    List<String> students = connectToSqlDB.readDataBase("student", "name");
-  //    for (String student: students){
-   //        System.out.println(student);
-  //      }
+  // for (String student: students){
+     //     System.out.println(student);
+     // }
 
 
     }

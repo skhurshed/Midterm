@@ -1,6 +1,7 @@
 package datastructure;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class UseArrayList {
 
@@ -25,15 +26,18 @@ public class UseArrayList {
 
 		System.out.println(list);
 
-		for (int i=0; i<list.size(); i++) {
-			System.out.println(list.get(i));
+		Iterator<Integer> it= list.iterator();
+
+		for (it=list.iterator();it.hasNext();)
+		{
+		System.out.println(it.next());
+	    }
+
+		while(it.hasNext())
+		{
+			System.out.println(it.next());
 		}
 
-		int i=0;
-		while (i<1){
-			System.out.println(list.get(3));
-			break;
-		}
 
 	}
 
