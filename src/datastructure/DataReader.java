@@ -1,10 +1,15 @@
 package datastructure;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
 
 public class DataReader {
+
+	public DataReader() throws FileNotFoundException {
+	}
 
 	public static void main(String[] args)throws IOException {
 		/*
@@ -32,7 +37,36 @@ public class DataReader {
 		fileReader.close();
 		bufferedReader.close();
 
+		String content = new String();
+
+		int count=1;
+		File file = new File("C:\\Users\\sadaf\\eclipse-workspace\\midterm-coding-exam\\src\\data\\self-driving-car");
+		LinkedList<String> list = new LinkedList<String>();
+
+		try {
+			Scanner sc = new Scanner(new FileInputStream(file));
+			while (sc.hasNextLine()){
+				content = sc.nextLine();
+				list.add(content);
+			}
+			sc.close();
+		}catch(FileNotFoundException fnf){
+			fnf.printStackTrace();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("\nProgram terminated Safely...");
+		}
+
+		Collections.reverse(list);
+		Iterator i = list.iterator();
+		while (i.hasNext()) {
+			System.out.print("Node " + (count++) + " : ");
+			System.out.println(i.next());
+		}
 
 	}
+
+
 
 }

@@ -23,4 +23,13 @@ public interface Employee {
 	//employee benefit
 	public void benefitLayout();
 
+	public void employeeEmail();
+
+	public void hoursWorked();
+
+	public void sickHoursAccrued();
+
+	public void vacationHoursAccrued();
+
+
 }

@@ -35,12 +35,59 @@ public class EmployeeInfo {
 	int id;
 	String lastName, firstName;
 	static double salary;
+	String email;
 
 
 
 
 
+	public static String getCompanyName() {
+		return companyName;
+	}
 
+	public static void setCompanyName(String companyName) {
+		EmployeeInfo.companyName = companyName;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public static double getSalary() {
+		return salary;
+	}
+
+	public static void setSalary(double salary) {
+		EmployeeInfo.salary = salary;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
@@ -51,24 +98,23 @@ public class EmployeeInfo {
 	 * 
 	 */
 	public static int calculateEmployeeBonus(int numberOfYearsWithCompany) {
-		double best=.10;
-		double average= .8;
-		double min= .03;
-		double performancePercentage = 0;
-		if(performancePercentage==best){
-			double bonus = salary * best;
+		boolean best= true;
+		boolean average=true;
+		int bonus = 0;
 
 
-		}else if(performancePercentage==average){
-			double bonus = salary * average;
+		if(best){
+			bonus += (salary * 10)/100;
+
+		}else if(average){
+			bonus += (salary * 8)/100;
 
 		}else {
-			double bonus = salary * min;
+			bonus += (salary * 3)/100;
+
 		}
 
-
-		double bonus = salary * performancePercentage;
-		return (int) bonus;
+		return bonus;
 	}
 	
 	/*
@@ -89,6 +135,12 @@ public class EmployeeInfo {
 
         //implement numbers of year from above two dates
 		//Calculate pension
+		int y = Integer.parseInt(convertedJoiningDate);
+		int x= Integer.parseInt(convertedTodaysDate);
+
+		int totalYearsWorked = x - y;
+
+
 
 
 
@@ -103,36 +155,6 @@ public class EmployeeInfo {
 
 
 
-	public int employeeId() {
-		final int id1 = this.id;
-		return 0;
-	}
-
-
-	public String employeeName() {
-		final String firstName1 = this.firstName;
-		final String lastName1 = this.lastName;
-		return null;
-	}
-
-
-	public void assignDepartment() {
-		String department= null;
-
-	}
-
-
-	public int calculateSalary() {
-		Scanner sc= new Scanner(System.in);
-		System.out.println("Enter your Salary: ");
-		salary=sc.nextInt();
-		return (int) salary;
-	}
-
-
-	public void benefitLayout() {
-
-	}
 
 
 	private static class DateConversion {
